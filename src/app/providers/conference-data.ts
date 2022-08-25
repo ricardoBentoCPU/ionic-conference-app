@@ -18,7 +18,7 @@ export class ConferenceData {
       return of(this.data);
     } else {
       return this.http
-        .get('assets/data/data.json')
+        .get('http://localhost:3000/api/conference')
         .pipe(map(this.processData, this));
     }
   }
